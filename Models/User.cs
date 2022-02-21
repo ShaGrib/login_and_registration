@@ -9,8 +9,10 @@ namespace login_and_registration.Models
         [Key]
         public int UserId { get; set; }
         [Required]
+        [MinLength(2)]
         public string FirstName { get; set; }
         [Required]
+        [MinLength(2)]
         public string LastName { get; set; }
         [Required]
         [EmailAddress]

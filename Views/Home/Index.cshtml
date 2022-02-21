@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model User
+
+<div class="d-flex justify-content-between my-4">
+    <div class="text-center">
+        <h1>Register to this Cool Site!</h1>
+    </div>
+    <div>
+        <a href="/login">Login</a>
+    </div>
+</div>
+<div>
+    <form action="/register" method="post">
+        <div class="row">
+            <div class="col">
+                <label for="FirstName">First Name</label>
+                <input asp-for="FirstName" class="form-control">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="col">
+                <label for="Password">Password</label>
+                <input asp-for="Password" class="form-control">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="LastName">Last Name</label>
+                <input asp-for="LastName" class="form-control">
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="col">
+                <label for="ConfirmPass">Confirm Password</label>
+                <input asp-for="ConfirmPass" class="form-control">
+                <span asp-validation-for="ConfirmPass" class="text-danger"></span>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="Email">Email</label>
+                <input asp-for="Email" class="form-control">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <input type="submit" value="Sign up Now" class="btn btn-secondary">
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+    </form>
+</div>
